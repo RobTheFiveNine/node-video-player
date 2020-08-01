@@ -1,0 +1,6 @@
+# Build fragments
+node_modules/
+build/
+
+# Test files
+coverage/
