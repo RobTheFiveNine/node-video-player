@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div
+  className="row video-container visible"
+>
+  <div
+    className="col-md-12"
+  >
+    <video
+      autoPlay={true}
+      controls={true}
+      width="100%"
+    >
+      <source
+        src="/videos/file.mp4"
+        type="video/mp4"
+      />
+    </video>
+  </div>
+</div>
+`;

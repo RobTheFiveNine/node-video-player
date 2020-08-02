@@ -7,7 +7,8 @@
   "author": "RobTheFiveNine",
   "license": "GPL-3.0-only",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "start:dev": "cd app && webpack-dev-server --config webpack.dev.js --content-base build/"
   },
   "devDependencies": {
     "coveralls": "^3.1.0",
@@ -21,6 +22,7 @@
     "eslint-plugin-react-hooks": "^4.0.8",
     "fetch-mock": "^9.10.5",
     "jest": "^26.2.1",
+    "node-fetch": "^2.6.0",
     "react-test-renderer": "^16.13.1",
     "supertest": "^4.0.2",
     "webpack-dev-server": "^3.11.0"

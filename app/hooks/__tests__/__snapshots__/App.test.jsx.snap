@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div>
+  <div
+    className="row video-container "
+  >
+    <div
+      className="col-md-12"
+    >
+      <video
+        autoPlay={true}
+        controls={true}
+        width="100%"
+      >
+        <source
+          src="/videos/"
+          type="video/"
+        />
+      </video>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-md-3 cursor-pointer text-center"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="link"
+      tabIndex={0}
+    >
+      <img
+        alt="Another Video"
+        className="thumbnail"
+        src="/videos/Another Video.mkv.jpg"
+      />
+      Another Video
+    </div>
+    <div
+      className="col-md-3 cursor-pointer text-center"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="link"
+      tabIndex={0}
+    >
+      <img
+        alt="Video File"
+        className="thumbnail"
+        src="/videos/Video_File.mp4.jpg"
+      />
+      Video File
+    </div>
+  </div>
+</div>
+`;

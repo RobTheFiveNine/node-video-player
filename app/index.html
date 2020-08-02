@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+
+    <title>Node Video Player</title>
+
+    <style>
+      body {
+        margin-top: 15px;
+      }
+
+      .thumbnail {
+        width: 100%;
+      }
+      
+      .video-container {
+        max-height: 0;
+        -webkit-transition: max-height 0.5s; 
+        -moz-transition: max-height 0.5s; 
+        -ms-transition: max-height 0.5s; 
+        -o-transition: max-height 0.5s; 
+        transition: max-height 0.5s; 
+        overflow: hidden;
+      }
+
+      .video-container.visible {
+        max-height: 3000px;
+      }
+
+      .cursor-pointer {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid" id="app" />
+  </body>
+</html>
