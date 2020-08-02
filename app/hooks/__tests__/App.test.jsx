@@ -40,16 +40,16 @@ describe('when a video is selected', () => {
       subject = create(<App />);
       setTimeout(resolve, 500);
     }));
-  
+
     const list = subject.root.findByType(VideoList);
     act(() => {
       list.props.onClick('new video.mp4');
     });
-  
+
     const video = subject.root.findByType(Video);
     expect(video.props.src).toEqual('new video.mp4');
   });
-  
+
   it('should scroll to the top of the body', async () => {
     let subject;
     await act(async () => new Promise((resolve) => {
