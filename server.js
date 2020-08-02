@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs-extra');
 const config = require('./config.json');
 
-const videoFileNamePattern = new RegExp(`\\.${config.videoFileTypes.join('|\\.')}$`);
+const videoFileNamePattern = new RegExp(`(\\.${config.videoFileTypes.join('|\\.')})$`);
 
 function createApp(appDirectory, videoDirectory) {
   const app = express();
