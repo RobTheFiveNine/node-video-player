@@ -24,7 +24,7 @@ describe('GET /videos.json', () => {
   it('should include the file names of the videos in the current working directory', async () => {
     const response = await agent.get('/videos.json');
     expect(response.status).toBe(200);
-    expect(response.body.filenames).toEqual(['Another Video.mkv', 'Video_File.mp4']);
+    expect(response.body.filenames).toEqual(['Another Video.webm', 'Video_File.mp4']);
   });
 });
 
