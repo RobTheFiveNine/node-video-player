@@ -1,5 +1,7 @@
-Node Video Player [![Build Status](https://github.com/RobTheFiveNine/node-video-player/workflows/build/badge.svg?branch=master)](https://github.com/RobTheFiveNine/node-video-player/actions?query=workflow%3Abuild+branch%3Amaster) [![Coverage Status](https://coveralls.io/repos/github/RobTheFiveNine/node-video-player/badge.svg?branch=master)](https://coveralls.io/github/RobTheFiveNine/node-video-player?branch=master) 
+Node Video Player
 =================
+[![Build Status](https://github.com/RobTheFiveNine/node-video-player/workflows/build/badge.svg?branch=master)](https://github.com/RobTheFiveNine/node-video-player/actions?query=workflow%3Abuild+branch%3Amaster) [![Coverage Status](https://coveralls.io/repos/github/RobTheFiveNine/node-video-player/badge.svg?branch=master)](https://coveralls.io/github/RobTheFiveNine/node-video-player?branch=master) 
+
 NVP is a lightweight web-based video player built with React.js and Node.js with an emphasis on being easily usable by users with accessibility issues which make more complex UIs difficult to use.
 
 Screenshot
