@@ -17,6 +17,7 @@ Installation
 5. Edit `config.json` to set the port number you want to run NVP on and which directory the videos can be found in
 6. Optionally, run the `__tools__/create_thumbnails.sh` script in the directory that contains the video files to automatically create thumbnails for the videos
 7. Start NVP by running `yarn start`
+8. Access the application at `http://localhost:3000/app`
 
 Why is the UI so basic?
 -----------------------
