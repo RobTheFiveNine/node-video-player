@@ -16,6 +16,13 @@
 
       .thumbnail {
         width: 100%;
+        height: calc(25vw * 0.56);
+        object-fit: cover;
+      }
+      @media all and (max-width: 768px) {
+        .thumbnail {
+          height: calc(100vw * 0.56);
+        }
       }
 
       .video-container {
