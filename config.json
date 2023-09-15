@@ -1,6 +1,6 @@
 {
   "port": 3000,
-  "videoDirectory": "../lectures",
+  "videoDirectory": null,
   "videoFileTypes": [
     "mp4",
     "webm",
