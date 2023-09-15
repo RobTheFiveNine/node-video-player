@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: #282828;
+    font-size: 14px;
+}
+.gallery {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1140px;
+    height: 100%;
+    margin: 0 auto;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+.directoryBox {
+    display: flex;
+    height: 33vh;
+    max-height: 180px;
+    min-width: 200px;
+    max-width: 25%;
+    cursor: pointer;
+    flex-basis: 18%;
+    margin-bottom: 30px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1em;
+    transition: background 500ms linear;
+}
+.directoryBox .title {
+    margin-top: auto;
+    padding: 0 0 20px 0;
+    color: #f0f0f0;
+}
+.folder {
+    position: relative;
+    height: 40%;
+    width: 55%;
+    margin-top: auto;
+    background: #ffd480;
+    border-radius: 0 4px 0 0;
+}
+.folder,
+.folder:before {
+    transition: background 150ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 150ms;
+}
+.folder:after,
+.folder:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.folder:after {
+    transform: scaleY(1) skewX(-2deg);
+    border-radius: 4px 4px 0 0;
+    transform-origin: bottom left;
+    background: #ffcb66;
+    transition: all 150ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 150ms;
+}
+.folder:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-50%);
+    height: 10px;
+    width: 30%;
+    background: #ffd480;
+    border-radius: 2px 6px 0 0;
+}
+.folder .file {
+    transform: scale(0.93, 0.94) skewX(-2deg) translate(-2px, 0);
+}
+.folder .file,
+.folder .file:after,
+.folder .file:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    box-shadow: -1px -1px 1px #ffd480;
+}
+.folder .file:before {
+    content: '';
+    transform: scale(1, 0.95) skewX(-3deg) translate(1px, 0);
+    transition: all 250ms cubic-bezier(0.77, 0, 0.175, 1) 250ms;
+}
+.folder .file:after {
+    content: '';
+    transform: scale(1, 0.88) skewX(-4deg) translate(3px, 0);
+}
+.directoryBox:hover .folder,
+.directoryBox:hover .folder:before {
+    background: #ffd480;
+}
+.directoryBox:hover .folder:after {
+    transform: scaleY(0.9) skewX(-6deg);
+    background: #ffcb66;
+}
+.directoryBox:hover .folder .file:before {
+    transform: scale(1, 0.95) skewX(-4deg) translate(15px, -30%) rotate(25deg);
+    box-shadow: -1px 1px 1px #ffd480;
+}
+.videoBox {
+    display: flex;
+    height: 33vh;
+    max-height: 180px;
+    min-width: 200px;
+    max-width: 25%;
+    cursor: pointer;
+    flex-basis: 18%;
+    margin-bottom: 30px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1em;
+    transition: background 500ms linear;
+}
+.videoBox .title {
+    margin-top: auto;
+    padding: 0 0 20px 0;
+    color: #f0f0f0;
+}
+.videoBox:hover .folder,
+.videoBox:hover .folder:before {
+    background: #ffd480;
+}
+.videoBox:hover .folder:after {
+    transform: scaleY(0.9) skewX(-6deg);
+    background: #ffcb66;
+}
+.videoBox:hover .folder .file:before {
+    transform: scale(1, 0.95) skewX(-4deg) translate(15px, -30%) rotate(25deg);
+    box-shadow: -1px 1px 1px #ffd480;
+}
+.videoContainer {
+    position: relative;
+    margin-top: auto;
+    border-radius: 0 4px 0 0;
+}
+.backRow {
+    background: #fff;
+    padding: 10px;
+}
+.backBtn {
+    max-width: 40px;
+    max-height: 40px;
+    color: white;
+    border: none;
+    padding: 5px;
+    box-shadow: 0 2px 4px darkslategray;
+    border-radius: 50%;
+}
+.backRow input{
+    max-width: 450px;
+}
+.searchFilterInput {
+    width: 100%;
+    padding: 10px;
+}
+.clearIcon {
+    float: right;
+    padding: 11px 0;
+    min-width: 35px;
+    margin-top: -37px;
+    text-align: center;
+    position: relative;
+    z-index: 999;
+    background: #f0f0f0;
+}
+.closeVideoBtn {
+    position: relative;
+    float: right;
+    top: 40px;
+    opacity: 0.5;
+}
+.closeVideoBtn:hover {
+    opacity: 1;
+    border-radius: 20px;
+}
+.nowPlayingTitle {
+    color: #f0f0f0;
+}

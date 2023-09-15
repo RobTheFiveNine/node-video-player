@@ -12,9 +12,9 @@ beforeEach(() => {
   agent = request.agent(app);
 });
 
-describe('GET /videos.json', () => {
+describe('POST /videos.json', () => {
   it('should flag to the browser to not cache the file', async () => {
-    const response = await agent.get('/videos.json');
+    const response = await agent.post('/videos.json');
     expect(response.status).toBe(200);
     expect(response.headers['cache-control']).toEqual('max-age=0, no-cache, no-store, must-revalidate');
     expect(response.headers.pragma).toEqual('no-cache');
@@ -22,7 +22,7 @@ describe('GET /videos.json', () => {
   });
 
   it('should include the file names of the videos in the current working directory', async () => {
-    const response = await agent.get('/videos.json');
+    const response = await agent.post('/videos.json');
     expect(response.status).toBe(200);
     expect(response.body.filenames).toEqual(['Another Video.webm', 'Video_File.Webm', 'Video_File.mp4']);
   });

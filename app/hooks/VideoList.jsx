@@ -1,31 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import config from '../../config.json';
 
-const getFriendlyName = (fileName) => {
-  const parts = fileName.split('.');
-  parts.splice(-1, 1);
-
-  return parts.join(' ').replace('_', ' ');
-};
+const videoFileNamePattern = new RegExp(`(\\.${config.videoFileTypes.join('|\\.')})$`, 'i');
+const getFriendlyName = (fileName) => fileName.replace(videoFileNamePattern, '');
 
 const VideoList = ({ videos, onClick }) => (
   <div className="row">
     {
         videos.map((v) => (
-          <div
-            key={v}
-            tabIndex={0}
-            role="link"
-            className="col-md-3 cursor-pointer text-center"
-            onClick={() => onClick(v)}
-            onKeyPress={() => onClick(v)}
-          >
-            <img
-              alt={getFriendlyName(v)}
-              src={`/videos/${v}.jpg`}
-              className="thumbnail"
-            />
-            {getFriendlyName(v)}
+          <div className="col-md-2 gallery mt-3">
+            <div
+              key={v}
+              tabIndex={0}
+              role="link"
+              className={classnames({
+                directoryBox: !videoFileNamePattern.test(v),
+                videoBox: videoFileNamePattern.test(v),
+              })}
+              onClick={() => onClick(v)}
+              onKeyPress={() => onClick(v)}
+            >
+              {!videoFileNamePattern.test(v) && (
+                <span className="folder">
+                  <span className="file" />
+                </span>
+              )}
+              {videoFileNamePattern.test(v) && (
+                <span className="videoContainer">
+                  <i className="fa fa-camera-retro fa-5x" style={{ color: '#fff' }} />
+                </span>
+              )}
+              <div className="title">{getFriendlyName(v)}</div>
+            </div>
           </div>
         ))
       }

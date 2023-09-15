@@ -4,9 +4,11 @@ Node Video Player
 
 NVP is a lightweight web-based video player built with React.js and Node.js with an emphasis on being easily usable by users with accessibility issues which make more complex UIs difficult to use.
 
-Screenshot
+Screenshots
 ----------
-![](.github/screenshot.png)
+![](.github/Screenshot_1.png)
+![](.github/Screenshot_2.png)
+![](.github/Screenshot_3.png)
 
 Installation
 ------------

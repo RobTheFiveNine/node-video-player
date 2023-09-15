@@ -1,9 +1,10 @@
 {
   "port": 3000,
-  "videoDirectory": null,
+  "videoDirectory": "../lectures",
   "videoFileTypes": [
     "mp4",
     "webm",
     "ogg"
-  ]
+  ],
+  "ignoreExt": ["srt", "pdf"]
 }

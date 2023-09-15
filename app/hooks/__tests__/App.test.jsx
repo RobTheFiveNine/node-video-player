@@ -7,7 +7,7 @@ import VideoList from '../VideoList';
 
 beforeEach(() => {
   global.document.body.scrollIntoView = jest.fn();
-  FetchMock.get(
+  FetchMock.post(
     '/videos.json',
     JSON.stringify({
       filenames: [
